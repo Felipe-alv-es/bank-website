@@ -35,10 +35,11 @@ const Navbar = () => {
   const isMobile = width <= 768;
 
   const menuOptions = [
-    { text: "Home", icon: <AiFillHome /> },
-    { text: "Sobre", icon: <AiFillDatabase /> },
-    { text: "Projetos", icon: <AiFillProject /> },
-    { text: "Contato", icon: <AiFillMessage /> },
+    { text: "Inicio", icon: <AiFillHome /> },
+    { text: "Para Clientes", icon: <AiFillDatabase /> },
+    { text: "Para Empresas", icon: <AiFillProject /> },
+    { text: "Benefícios", icon: <AiFillMessage /> },
+    { text: "Ajuda", icon: <AiFillMessage /> },
   ];
 
   return (
@@ -99,7 +100,7 @@ const Navbar = () => {
             variant="h5"
             sx={{ marginLeft: "1em", pointerEvents: "none" }}
           >
-            Felipe Alves
+            LogoPlaceHolder
           </Typography>
           <ul>
             {menuOptions.map((item) => (

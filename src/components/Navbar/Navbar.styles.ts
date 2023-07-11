@@ -5,6 +5,7 @@ export const getNavbarStyles = (): SxProps => ({
   justifyContent: "space-between",
   width: "100%",
   alignItems: "center",
+  background: "#5271FF",
   "> ul": {
     display: "flex",
     listStyle: "none",
@@ -18,6 +19,7 @@ export const getNavbarStyles = (): SxProps => ({
 
         marginRight: "1em",
         marginTop: "5px",
+        marginBottom: "5px",
         padding: "15px",
         borderRadius: "5px",
         transition: ".5s",

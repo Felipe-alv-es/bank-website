@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
+import { Box } from "@mui/material";
 
 const Home = () => {
   return (
-    <>
+    <Box>
       <Navbar />
-      <div>Test Home</div>
-    </>
+    </Box>
   );
 };
 
