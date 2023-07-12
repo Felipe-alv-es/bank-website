@@ -1,14 +1,19 @@
 import React, { useState } from "react";
 import {
   Box,
-  Typography,
   Drawer,
   IconButton,
   Icon,
   Divider,
   Link,
+  Button,
 } from "@mui/material";
-import { getNavbarStyles, getDrawerMenuStyle } from "./Navbar.styles.ts";
+import {
+  getNavbarStyles,
+  getDrawerMenuStyle,
+  getImageStyle,
+  StyledTextField,
+} from "./Navbar.styles.tsx";
 import { GiHamburgerMenu } from "react-icons/gi";
 import {
   AiFillHome,
@@ -16,6 +21,8 @@ import {
   AiFillProject,
   AiFillMessage,
 } from "react-icons/ai";
+import FBLogo from "../../assets/images/FictionalBankLogo.png";
+import Lock from "../../assets/images/Cadeado.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,13 +82,7 @@ const Navbar = () => {
                   <>
                     <li key={item.text}>
                       <Icon>{item.icon}</Icon>
-                      <Link
-                        onClick={() => setIsOpen(false)}
-                        smooth
-                        to={`#${item.text}`}
-                      >
-                        {item.text}
-                      </Link>
+                      <Link onClick={() => setIsOpen(false)}>{item.text}</Link>
                     </li>
                     <Divider
                       variant="inset"
@@ -95,22 +96,39 @@ const Navbar = () => {
         </Box>
       ) : (
         <Box sx={getNavbarStyles}>
-          <Typography
-            fontFamily={"roboto"}
-            variant="h5"
-            sx={{ marginLeft: "1em", pointerEvents: "none" }}
-          >
-            LogoPlaceHolder
-          </Typography>
+          <Box
+            sx={getImageStyle}
+            component="img"
+            src={FBLogo}
+            alt="FictionalBank Logo"
+          />
           <ul>
             {menuOptions.map((item) => (
               <li key={item.text}>
-                <Link smooth to={`#${item.text}`}>
-                  {item.text}
-                </Link>
+                <Link>{item.text}</Link>
               </li>
             ))}
           </ul>
+          <Box display={"flex"}>
+            <StyledTextField />
+            <IconButton
+              sx={{
+                width: "48px",
+                height: "48px",
+                background: "#ffffff",
+                borderRadius: "4px",
+                marginLeft: "20px",
+              }}
+            >
+              <img alt="Lock Icon" src={Lock} style={{ width: "24px" }} />
+            </IconButton>
+          </Box>
+          <Button
+            variant="outlined"
+            sx={{ color: "white", borderColor: "white" }}
+          >
+            Abra sua conta
+          </Button>
         </Box>
       )}
     </>
