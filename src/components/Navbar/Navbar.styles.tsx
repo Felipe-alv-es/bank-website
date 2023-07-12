@@ -1,26 +1,36 @@
-import { SxProps, TextFieldProps, Box } from "@mui/material/";
+import {
+  SxProps,
+  TextFieldProps,
+  Box,
+  IconButton,
+  IconButtonProps,
+  Divider,
+  Button,
+  ButtonProps,
+} from "@mui/material/";
 import React from "react";
 
 export const getNavbarStyles = (): SxProps => ({
   display: "flex",
   width: "100%",
-  height: "80px",
   alignItems: "center",
-  justifyContent: "space-between",
+  // justifyContent: "space-between",
   background: "#5271FF",
-  padding: "0 80px 0 80px",
+  padding: "0 48px 0 48px",
+  paddingBottom: "12px",
+  paddingTop: "12px",
   "> ul": {
     display: "flex",
     listStyle: "none",
     cursor: "pointer",
-    marginLeft: "32px",
+    marginLeft: "16px",
     "> li": {
       "> *": {
-        color: "#FFFFFF",
+        color: "#f3f3f3",
         textDecoration: "none",
         borderRadius: "5px",
         transition: ".5s",
-        fontSize: "16px",
+        fontSize: "12px",
         fontWeight: "bold",
         height: "40px",
         padding: "16px",
@@ -35,8 +45,76 @@ export const getNavbarStyles = (): SxProps => ({
   },
 });
 
+export const getImageStyle = (): SxProps => ({
+  height: "40px",
+});
+
+export const StyledTextField = React.forwardRef<HTMLElement, TextFieldProps>(
+  () => (
+    <Box
+      sx={{
+        display: "flex",
+        background: "#f3f3f3",
+        borderRadius: "4px",
+        padding: "4px",
+      }}
+    >
+      <input
+        placeholder="Agência"
+        style={{
+          borderStyle: "none",
+          width: "64px",
+          textAlign: "center",
+        }}
+      />
+      <Divider
+        orientation="vertical"
+        sx={{
+          background: "#374957",
+          borderRadius: "4px",
+          borderWidth: "3px",
+          margin: "0 8px 0 8px",
+        }}
+      />
+      <input
+        placeholder="Conta"
+        style={{ borderStyle: "none", width: "68px", textAlign: "center" }}
+      />
+    </Box>
+  )
+);
+
+export const StyledLockButton = React.forwardRef<HTMLElement, IconButtonProps>(
+  (props) => (
+    <IconButton
+      sx={{
+        width: "40px",
+        height: "40px",
+        background: "#f3f3f3",
+        borderRadius: "4px",
+        marginLeft: "20px",
+      }}
+      {...props}
+    ></IconButton>
+  )
+);
+
+export const StyledOutlineButton = React.forwardRef<HTMLElement, ButtonProps>(
+  (props) => (
+    <Button
+      variant="outlined"
+      sx={{
+        color: "white",
+        borderColor: "white",
+        textTransform: "none",
+      }}
+      {...props}
+    />
+  )
+);
+
 export const getDrawerMenuStyle = (): SxProps => ({
-  width: "187px",
+  width: "200px",
 
   "> ul": {
     listStyle: "none",
@@ -50,28 +128,9 @@ export const getDrawerMenuStyle = (): SxProps => ({
       "> *": {
         color: "#1a1a1a",
         textDecoration: "none",
-        fontSize: "20px",
         marginLeft: "10px",
         lineHeight: "31px",
       },
     },
   },
 });
-
-export const getImageStyle = (): SxProps => ({
-  height: "60px",
-});
-
-export const StyledTextField = React.forwardRef<HTMLElement, TextFieldProps>(
-  (props) => (
-    <Box
-      sx={{
-        display: "flex",
-        width: "184px",
-        height: "54px",
-        background: "#ffffff",
-        borderRadius: "4px",
-      }}
-    ></Box>
-  )
-);
