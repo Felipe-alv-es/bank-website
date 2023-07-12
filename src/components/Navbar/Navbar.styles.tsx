@@ -1,33 +1,34 @@
-import { SxProps } from "@mui/material/";
+import { SxProps, TextFieldProps, Box } from "@mui/material/";
+import React from "react";
 
 export const getNavbarStyles = (): SxProps => ({
   display: "flex",
-  justifyContent: "space-between",
   width: "100%",
+  height: "80px",
   alignItems: "center",
+  justifyContent: "space-between",
   background: "#5271FF",
+  padding: "0 80px 0 80px",
   "> ul": {
     display: "flex",
     listStyle: "none",
-    alignItems: "center",
     cursor: "pointer",
+    marginLeft: "32px",
     "> li": {
-      display: "flex",
       "> *": {
-        color: "#1a1a1a",
+        color: "#FFFFFF",
         textDecoration: "none",
-
-        marginRight: "1em",
-        marginTop: "5px",
-        marginBottom: "5px",
-        padding: "15px",
         borderRadius: "5px",
         transition: ".5s",
+        fontSize: "16px",
+        fontWeight: "bold",
+        height: "40px",
+        padding: "16px",
         ":hover": {
-          background: "#DEDEDE",
+          background: "#3F8AE8",
         },
         ":active": {
-          background: "#C4C4C4",
+          background: "#4567FF",
         },
       },
     },
@@ -35,7 +36,7 @@ export const getNavbarStyles = (): SxProps => ({
 });
 
 export const getDrawerMenuStyle = (): SxProps => ({
-  width: "187px", // Verificar como deixar responsivo o Width
+  width: "187px",
 
   "> ul": {
     listStyle: "none",
@@ -56,3 +57,21 @@ export const getDrawerMenuStyle = (): SxProps => ({
     },
   },
 });
+
+export const getImageStyle = (): SxProps => ({
+  height: "60px",
+});
+
+export const StyledTextField = React.forwardRef<HTMLElement, TextFieldProps>(
+  (props) => (
+    <Box
+      sx={{
+        display: "flex",
+        width: "184px",
+        height: "54px",
+        background: "#ffffff",
+        borderRadius: "4px",
+      }}
+    ></Box>
+  )
+);
