@@ -90,23 +90,25 @@ const Navbar = () => {
         </Box>
       ) : (
         <Box sx={getNavbarStyles}>
-          <Box
-            sx={getImageStyle}
-            component="img"
-            src={FBLogo}
-            alt="FictionalBank Logo"
-          />
-          <ul>
-            {menuOptions.map((item) => (
-              <li key={item.text}>
-                <Link>{item.text}</Link>
-              </li>
-            ))}
-          </ul>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Box
+              sx={getImageStyle}
+              component="img"
+              src={FBLogo}
+              alt="FictionalBank Logo"
+            />
+            <ul>
+              {menuOptions.map((item) => (
+                <li key={item.text}>
+                  <Link>{item.text}</Link>
+                </li>
+              ))}
+            </ul>
+          </Box>
           <Box display={"flex"}>
             <StyledTextField />
             <StyledLockButton>
-              <img alt="Lock Icon" src={Lock} style={{ width: "24px" }} />
+              <img alt="Lock Icon" src={Lock} style={{ width: "20px" }} />
             </StyledLockButton>
           </Box>
           <StyledOutlineButton>Abra sua conta</StyledOutlineButton>

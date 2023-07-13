@@ -14,12 +14,12 @@ export const getNavbarStyles = (): SxProps => ({
   display: "flex",
   width: "100%",
   alignItems: "center",
-  // justifyContent: "space-between",
   background: "#5271FF",
-  padding: "0 48px 0 48px",
+  padding: "0 60px 0 60px",
   paddingBottom: "12px",
   paddingTop: "12px",
-  "> ul": {
+  justifyContent: "space-between",
+  "> div > ul": {
     display: "flex",
     listStyle: "none",
     cursor: "pointer",
@@ -30,15 +30,15 @@ export const getNavbarStyles = (): SxProps => ({
         textDecoration: "none",
         borderRadius: "5px",
         transition: ".5s",
-        fontSize: "12px",
+        fontSize: "14px",
         fontWeight: "bold",
         height: "40px",
         padding: "16px",
         ":hover": {
-          background: "#3F8AE8",
+          background: "#4966E6",
         },
         ":active": {
-          background: "#4567FF",
+          background: "#415BCC",
         },
       },
     },
@@ -56,29 +56,45 @@ export const StyledTextField = React.forwardRef<HTMLElement, TextFieldProps>(
         display: "flex",
         background: "#f3f3f3",
         borderRadius: "4px",
-        padding: "4px",
+        padding: "8px",
+        alignItems: "center",
       }}
     >
       <input
-        placeholder="Agência"
+        placeholder="agência"
+        type="text"
         style={{
           borderStyle: "none",
           width: "64px",
-          textAlign: "center",
+          backgroundColor: "#f3f3f3",
+          fontSize: "14px",
+          outline: "none",
+          paddingLeft: "8px",
+          color: "#374957",
         }}
       />
       <Divider
         orientation="vertical"
         sx={{
-          background: "#374957",
+          background: "#C8C7C9",
           borderRadius: "4px",
-          borderWidth: "3px",
+          borderWidth: "1px",
           margin: "0 8px 0 8px",
+          height: "16px",
         }}
       />
       <input
-        placeholder="Conta"
-        style={{ borderStyle: "none", width: "68px", textAlign: "center" }}
+        placeholder="conta"
+        type="text"
+        style={{
+          borderStyle: "none",
+          width: "56px",
+          backgroundColor: "#f3f3f3",
+          fontSize: "14px",
+          outline: "none",
+          color: "#374957",
+          paddingLeft: "8px",
+        }}
       />
     </Box>
   )
@@ -92,7 +108,10 @@ export const StyledLockButton = React.forwardRef<HTMLElement, IconButtonProps>(
         height: "40px",
         background: "#f3f3f3",
         borderRadius: "4px",
-        marginLeft: "20px",
+        marginLeft: "8px",
+        ":hover": {
+          background: "#E6E6E6",
+        },
       }}
       {...props}
     ></IconButton>
@@ -107,6 +126,10 @@ export const StyledOutlineButton = React.forwardRef<HTMLElement, ButtonProps>(
         color: "white",
         borderColor: "white",
         textTransform: "none",
+        padding: "8px 12px 8px 12px",
+        ":hover": {
+          borderColor: "#E6E6E6",
+        },
       }}
       {...props}
     />
