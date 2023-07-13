@@ -1,18 +1,12 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Drawer,
-  IconButton,
-  Icon,
-  Divider,
-  Link,
-  Button,
-} from "@mui/material";
+import { Box, Drawer, IconButton, Icon, Divider, Link } from "@mui/material";
 import {
   getNavbarStyles,
   getDrawerMenuStyle,
   getImageStyle,
   StyledTextField,
+  StyledLockButton,
+  StyledOutlineButton,
 } from "./Navbar.styles.tsx";
 import { GiHamburgerMenu } from "react-icons/gi";
 import {
@@ -96,39 +90,28 @@ const Navbar = () => {
         </Box>
       ) : (
         <Box sx={getNavbarStyles}>
-          <Box
-            sx={getImageStyle}
-            component="img"
-            src={FBLogo}
-            alt="FictionalBank Logo"
-          />
-          <ul>
-            {menuOptions.map((item) => (
-              <li key={item.text}>
-                <Link>{item.text}</Link>
-              </li>
-            ))}
-          </ul>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Box
+              sx={getImageStyle}
+              component="img"
+              src={FBLogo}
+              alt="FictionalBank Logo"
+            />
+            <ul>
+              {menuOptions.map((item) => (
+                <li key={item.text}>
+                  <Link>{item.text}</Link>
+                </li>
+              ))}
+            </ul>
+          </Box>
           <Box display={"flex"}>
             <StyledTextField />
-            <IconButton
-              sx={{
-                width: "48px",
-                height: "48px",
-                background: "#ffffff",
-                borderRadius: "4px",
-                marginLeft: "20px",
-              }}
-            >
-              <img alt="Lock Icon" src={Lock} style={{ width: "24px" }} />
-            </IconButton>
+            <StyledLockButton>
+              <img alt="Lock Icon" src={Lock} style={{ width: "20px" }} />
+            </StyledLockButton>
           </Box>
-          <Button
-            variant="outlined"
-            sx={{ color: "white", borderColor: "white" }}
-          >
-            Abra sua conta
-          </Button>
+          <StyledOutlineButton>Abra sua conta</StyledOutlineButton>
         </Box>
       )}
     </>
