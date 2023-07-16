@@ -14,7 +14,6 @@ function Item({ item }) {
           position: "absolute",
           marginLeft: "64px",
           top: "40%",
-          //   width: "50%",
         }}
       >
         <Typography
