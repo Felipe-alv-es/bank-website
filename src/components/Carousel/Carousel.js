@@ -5,7 +5,6 @@ function StyledCarousel(props) {
     <Carousel
       animation="slide"
       duration={700}
-      interval={112000}
       indicatorContainerProps={{
         style: {
           marginTop: "-5%",
