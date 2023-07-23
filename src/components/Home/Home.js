@@ -1,19 +1,50 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
-import { Box } from "@mui/material";
-import StyledCarousel from "../Carousel/Carousel";
-import BannerItems from "../Carousel/BannerItems";
+import { Box, Typography, Button } from "@mui/material";
+import { Swiper, SwiperSlide } from "swiper/react";
 import homeSlider from "../../assets/utils/homeSlider.json";
+import {
+  getImageStyle,
+  getContentBoxStyle,
+  getTitleStyle,
+  getTextStyle,
+  getButtonStyle,
+} from "./Home.styles.ts";
 
 const Home = () => {
+  const params = {
+    slidesPerView: 1,
+    navigation: true,
+    pagination: { clickable: true },
+    autoplay: true,
+  };
+
   return (
     <Box>
       <Navbar />
-      <StyledCarousel interval={12000}>
+      <Swiper {...params}>
         {homeSlider.map((item) => (
-          <BannerItems key={item.id} item={item} />
+          <SwiperSlide key={item.id}>
+            <Box>
+              <Box
+                component="img"
+                alt={item.title}
+                src={item.image}
+                sx={getImageStyle}
+              />
+              <Box sx={getContentBoxStyle}>
+                <Typography sx={getTitleStyle}>{item.title}</Typography>
+                <Box sx={{ m: 3 }} />
+                <Typography sx={getTextStyle}>{item.text}</Typography>
+                <Box sx={{ m: 3 }} />
+                <Button variant="outlined" sx={getButtonStyle}>
+                  Confira
+                </Button>
+              </Box>
+            </Box>
+          </SwiperSlide>
         ))}
-      </StyledCarousel>
+      </Swiper>
     </Box>
   );
 };
