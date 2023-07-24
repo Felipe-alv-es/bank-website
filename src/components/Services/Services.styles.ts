@@ -1,5 +1,3 @@
-import { TypographyProps } from "@mui/system";
-
 export const getContainerStyle = () => ({
   display: "flex",
   padding: "16px 32px 16px 32px",
@@ -22,7 +20,7 @@ export const getTextBoxStyle = () => ({
 export const getTitleStyle = () => ({
   display: "flex",
   lineHeight: "24px",
-  "> *": {
+  "> p": {
     variant: "subtitle1",
     fontWeight: "medium",
     color: "#5271FF",
@@ -31,6 +29,7 @@ export const getTitleStyle = () => ({
   },
   "> span > svg": {
     fontSize: "20px",
+    color: "#5271FF",
   },
 });
 
@@ -39,10 +38,10 @@ export const getTextStyle = () => ({
   whiteSpace: "pre-line",
 });
 
-export const getPageTitleStyle = (): TypographyProps => ({
+export const getPageTitleStyle = () => ({
   typography: "h4",
   fontWeight: "bold",
-  whiteSpace: "pre-line",
   margin: "32px",
   color: "#374957",
+  whiteSpace: "pre-line",
 });
