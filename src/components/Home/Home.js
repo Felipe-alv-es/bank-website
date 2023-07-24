@@ -9,6 +9,7 @@ import {
   getTitleStyle,
   getTextStyle,
   getButtonStyle,
+  getContainerStyle,
 } from "./Home.styles.ts";
 
 const Home = () => {
@@ -20,7 +21,7 @@ const Home = () => {
   };
 
   return (
-    <Box>
+    <Box sx={getContainerStyle}>
       <Navbar />
       <Swiper {...params}>
         {homeSlider.map((item) => (

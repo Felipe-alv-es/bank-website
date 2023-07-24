@@ -1,3 +1,19 @@
+export const getContainerStyle = () => ({
+  "> div > .swiper-button-prev": {
+    color: "#f3f3f3",
+  },
+  "> div > .swiper-button-next": {
+    color: "#f3f3f3",
+  },
+  "> div > .swiper-pagination": {
+    "> span": {
+      height: "16px",
+      width: "16px",
+      background: "#f3f3f3",
+    },
+  },
+});
+
 export const getImageStyle = () => ({
   width: "100%",
   position: "relative",
@@ -32,3 +48,5 @@ export const getButtonStyle = () => ({
     borderColor: "#E6E6E6",
   },
 });
+
+// swiper-button-prev
