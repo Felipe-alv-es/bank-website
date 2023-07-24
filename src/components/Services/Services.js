@@ -41,7 +41,7 @@ const Services = () => {
             <SwiperSlide key={item.id}>
               <Box sx={getTextBoxStyle}>
                 <Box sx={getTitleStyle}>
-                  <Typography sx={{}}>{item.title}</Typography>
+                  <Typography>{item.title}</Typography>
                   <Icon>{item.icon}</Icon>
                 </Box>
                 <Box sx={{ m: 2 }} />
