@@ -41,7 +41,7 @@ export const getTextStyle = () => ({
 export const getPageTitleStyle = () => ({
   typography: "h4",
   fontWeight: "bold",
-  margin: "32px",
+  margin: "32px 32px 32px 72px",
   color: "#374957",
   whiteSpace: "pre-line",
 });
