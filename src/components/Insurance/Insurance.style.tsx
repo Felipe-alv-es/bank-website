@@ -28,6 +28,7 @@ export const getHouseInsuranceStyle = () => ({
   padding: "24px",
   borderRadius: "8px",
   width: "65%",
+  background: "#f3f3f3",
 });
 
 export const getInsuranceNameStyle = () => ({
@@ -62,6 +63,7 @@ export const getOurInsurancesContainerStyles = () => ({
   borderWidth: "1px",
   borderRadius: "8px",
   width: "30%",
+  background: "#f3f3f3",
 });
 
 export const StyledButton = (props) => {

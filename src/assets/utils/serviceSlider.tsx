@@ -13,7 +13,7 @@ const serviceSlider = [
   {
     id: 2,
     title: "Fatura Digital",
-    text: "Com a 'Fatura Digital', você pode \n dizer adeus ao papel e receber suas \n faturas de forma prática. Adentre a \n essa facilidade.",
+    text: "Com a Fatura Digital, você pode \n dizer adeus ao papel e receber suas \n faturas de forma prática. Adentre a \n essa facilidade.",
     icon: <HiOutlineDocumentReport />,
   },
   {
