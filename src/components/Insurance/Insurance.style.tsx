@@ -1,5 +1,6 @@
-import { Button } from "@mui/material";
 import React from "react";
+import { Button } from "@mui/material";
+import insuranceBackground from "../../assets/images/PeoplesInverted.jpg";
 
 export const getContainerStyle = () => ({
   margin: "76px",
@@ -28,7 +29,10 @@ export const getHouseInsuranceStyle = () => ({
   padding: "24px",
   borderRadius: "8px",
   width: "65%",
-  background: "#f3f3f3",
+  backgroundPosition: "right",
+  backgroundSize: "contain",
+  backgroundImage: `linear-gradient(to right, #f3f3f3, #f3f3f3,#f3f3f3, transparent, transparent), url('${insuranceBackground}')`,
+  backgroundRepeat: "no-repeat",
 });
 
 export const getInsuranceNameStyle = () => ({
