@@ -1,6 +1,7 @@
 import Home from "./components/Home/Home";
 import Services from "./components/Services/Services";
 import Insurance from "./components/Insurance/Insurance";
+import Creditcard from "./components/Creditcard/Creditcard";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Home />
       <Services />
       <Insurance />
+      <Creditcard />
     </div>
   );
 }
