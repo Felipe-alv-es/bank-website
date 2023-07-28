@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Box, Icon, IconButton, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Box, IconButton, Typography } from "@mui/material";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-import serviceSlider from "../../assets/utils/serviceSlider.tsx";
+import creditCardSlider from "../../assets/utils/creditCardSlider.tsx";
 import {
   getIconButtonStyle,
   getTextBoxStyle,
@@ -10,9 +10,11 @@ import {
   getTextStyle,
   getContainerStyle,
   getPageTitleStyle,
-} from "./Services.styles.ts";
+  StyledButton,
+  getImageBoxStyle,
+} from "./Creditcard.styles.tsx";
 
-const Services = () => {
+const Creditcard = () => {
   const [swiper, setSwiper] = useState();
   const swipeNextPage = () => swiper.slideTo(+1);
   const swipePreviousPage = () => swiper.slideTo(-1);
@@ -30,23 +32,29 @@ const Services = () => {
   return (
     <Box>
       <Typography sx={getPageTitleStyle}>
-        {"Confira nossos serviços"}
+        {"Cartões de crédito mais populares"}
       </Typography>
       <Box sx={getContainerStyle}>
         <IconButton onClick={swipePreviousPage} sx={getIconButtonStyle}>
           <BsChevronLeft />
         </IconButton>
         <Swiper {...params}>
-          {serviceSlider.map((item) => (
+          {creditCardSlider.map((item) => (
             <SwiperSlide key={item.id}>
               <Box sx={getTextBoxStyle}>
+                <Box sx={getImageBoxStyle}>
+                  <Box component="img" alt={item.title} src={item.img} />
+                </Box>
+                <Box sx={{ m: 3 }} />
                 <Box sx={getTitleStyle}>
                   <Typography>{item.title}</Typography>
-                  <Icon>{item.icon}</Icon>
                 </Box>
                 <Box sx={{ m: 2 }} />
                 <Typography sx={getTextStyle}>{item.text}</Typography>
                 <Box sx={{ m: 3 }} />
+                <Box sx={{ paddingLeft: "32px" }}>{item.list}</Box>
+                <Box sx={{ m: 5 }} />
+                <StyledButton>{"Confira"}</StyledButton>
               </Box>
             </SwiperSlide>
           ))}
@@ -59,4 +67,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Creditcard;
