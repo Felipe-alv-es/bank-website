@@ -11,6 +11,8 @@ export const getIconButtonStyle = () => ({
   borderWidth: "1px",
   background: "#f3f3f3",
   borderRadius: "8px",
+  height: "280px", // Verificar o Height para ficar responsivo
+  alignSelf: "center",
 });
 
 export const getTextBoxStyle = () => ({

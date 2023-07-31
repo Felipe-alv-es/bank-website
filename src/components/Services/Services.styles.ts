@@ -15,6 +15,7 @@ export const getTextBoxStyle = () => ({
   borderWidth: "1px",
   borderStyle: "solid",
   borderRadius: "8px",
+  height: "100%",
 });
 
 export const getTitleStyle = () => ({

@@ -20,9 +20,22 @@ const Creditcard = () => {
   const swipePreviousPage = () => swiper.slideTo(-1);
 
   const params = {
-    slidesPerView: 3,
     spaceBetween: "36px",
     onSwiper: setSwiper,
+    breakpoints: {
+      200: {
+        slidesPerView: 1,
+      },
+      850: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 3,
+      },
+      1500: {
+        slidesPerView: 4,
+      },
+    },
     style: {
       margin: "0 36px 0 36px",
       background: "#f3f3f3",
@@ -42,18 +55,20 @@ const Creditcard = () => {
           {creditCardSlider.map((item) => (
             <SwiperSlide key={item.id}>
               <Box sx={getTextBoxStyle}>
-                <Box sx={getImageBoxStyle}>
-                  <Box component="img" alt={item.title} src={item.img} />
+                <Box sx={{ height: "80%" }}>
+                  <Box sx={getImageBoxStyle}>
+                    <Box component="img" alt={item.title} src={item.img} />
+                  </Box>
+                  <Box sx={{ m: 3 }} />
+                  <Box sx={getTitleStyle}>
+                    <Typography>{item.title}</Typography>
+                  </Box>
+                  <Box sx={{ m: 2 }} />
+                  <Typography sx={getTextStyle}>{item.text}</Typography>
+                  <Box sx={{ m: 3 }} />
+                  <Box sx={{ paddingLeft: "32px" }}>{item.list}</Box>
+                  <Box sx={{ m: 5 }} />
                 </Box>
-                <Box sx={{ m: 3 }} />
-                <Box sx={getTitleStyle}>
-                  <Typography>{item.title}</Typography>
-                </Box>
-                <Box sx={{ m: 2 }} />
-                <Typography sx={getTextStyle}>{item.text}</Typography>
-                <Box sx={{ m: 3 }} />
-                <Box sx={{ paddingLeft: "32px" }}>{item.list}</Box>
-                <Box sx={{ m: 5 }} />
                 <StyledButton>{"Confira"}</StyledButton>
               </Box>
             </SwiperSlide>

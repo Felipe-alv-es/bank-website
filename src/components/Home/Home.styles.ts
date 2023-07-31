@@ -7,9 +7,12 @@ export const getContainerStyle = () => ({
   },
   "> div > .swiper-pagination": {
     "> span": {
-      height: "16px",
-      width: "16px",
-      background: "#f3f3f3",
+      height: "12px",
+      width: "12px",
+      borderColor: "#f3f3f3",
+      borderStyle: "solid",
+      background: "transparent",
+      borderWidth: "2px",
     },
   },
 });
@@ -48,5 +51,3 @@ export const getButtonStyle = () => ({
     borderColor: "#E6E6E6",
   },
 });
-
-// swiper-button-prev
