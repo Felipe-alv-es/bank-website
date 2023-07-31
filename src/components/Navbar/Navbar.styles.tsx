@@ -127,6 +127,7 @@ export const StyledOutlineButton = React.forwardRef<HTMLElement, ButtonProps>(
         borderColor: "white",
         textTransform: "none",
         padding: "8px 12px 8px 12px",
+        whiteSpace: "nowrap",
         ":hover": {
           borderColor: "#E6E6E6",
         },
