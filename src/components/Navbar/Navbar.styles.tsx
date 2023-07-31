@@ -31,7 +31,7 @@ export const getNavbarStyles = (): SxProps => ({
         borderRadius: "5px",
         transition: ".5s",
         fontSize: "14px",
-        fontWeight: "bold",
+        fontWeight: "medium",
         height: "40px",
         padding: "16px",
         ":hover": {
