@@ -20,9 +20,22 @@ const Creditcard = () => {
   const swipePreviousPage = () => swiper.slideTo(-1);
 
   const params = {
-    slidesPerView: 3,
     spaceBetween: "36px",
     onSwiper: setSwiper,
+    breakpoints: {
+      200: {
+        slidesPerView: 1,
+      },
+      850: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 3,
+      },
+      1500: {
+        slidesPerView: 4,
+      },
+    },
     style: {
       margin: "0 36px 0 36px",
       background: "#f3f3f3",

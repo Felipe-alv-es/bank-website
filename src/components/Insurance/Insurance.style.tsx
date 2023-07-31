@@ -21,6 +21,9 @@ export const getPageSubtitleStyle = () => ({
 export const getContentContainerStyle = () => ({
   display: "flex",
   justifyContent: "space-between",
+  "@media(max-width: 1150px)": {
+    display: "block",
+  },
 });
 
 export const getHouseInsuranceStyle = () => ({
@@ -33,6 +36,15 @@ export const getHouseInsuranceStyle = () => ({
   backgroundSize: "contain",
   backgroundImage: `linear-gradient(to right, #f3f3f3, #f3f3f3,#f3f3f3, transparent, transparent), url('${insuranceBackground}')`,
   backgroundRepeat: "no-repeat",
+  "@media(max-width: 1150px)": {
+    width: "100%",
+    marginBottom: "32px",
+    backgroundImage: `linear-gradient(to right, #f3f3f3, #f3f3f3,#f3f3f3,#f3f3f3, transparent, transparent), url('${insuranceBackground}')`,
+  },
+  "@media(max-width: 560px)": {
+    backgroundImage: "none",
+    background: "#f3f3f3",
+  },
 });
 
 export const getInsuranceNameStyle = () => ({
@@ -68,6 +80,9 @@ export const getOurInsurancesContainerStyles = () => ({
   borderRadius: "8px",
   width: "30%",
   background: "#f3f3f3",
+  "@media(max-width: 1150px)": {
+    width: "100%",
+  },
 });
 
 export const StyledButton = (props) => {
