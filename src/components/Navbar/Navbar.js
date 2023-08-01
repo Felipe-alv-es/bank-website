@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Box, Drawer, IconButton, Icon, Divider, Link } from "@mui/material";
+import { Box, Drawer, Icon, Divider, Link } from "@mui/material";
+import FBLogo from "../../assets/images/FictionalBankLogo.png";
 import {
   getNavbarStyles,
   getDrawerMenuStyle,
@@ -7,16 +8,17 @@ import {
   StyledTextField,
   StyledLockButton,
   StyledOutlineButton,
+  StyledBurguerButton,
+  getMobileContainerStyle,
+  getMobileLogoStyle,
 } from "./Navbar.styles.tsx";
-import { GiHamburgerMenu } from "react-icons/gi";
 import {
   AiFillHome,
   AiFillDatabase,
   AiFillProject,
   AiFillMessage,
+  AiOutlineLock,
 } from "react-icons/ai";
-import FBLogo from "../../assets/images/FictionalBankLogo.png";
-import Lock from "../../assets/images/Cadeado.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,31 +48,25 @@ const Navbar = () => {
   return (
     <>
       {isMobile ? (
-        <Box
-          sx={{
-            display: "flex",
-            width: "100%",
-          }}
-        >
-          <IconButton
-            size="large"
+        <Box sx={getMobileContainerStyle}>
+          <Box
+            sx={getMobileLogoStyle}
+            component="img"
+            src={FBLogo}
+            alt="FictionalBank Logo"
+          />
+          <StyledOutlineButton>Abra sua conta</StyledOutlineButton>
+          <StyledBurguerButton
             onClick={() => setIsOpen(isOpen ? false : true)}
-          >
-            <GiHamburgerMenu />
-          </IconButton>
+            isOpen={isOpen}
+          />
           <Drawer
             PaperProps={{ sx: { background: "#e7e7e7" } }}
             open={isOpen}
-            anchor="left"
+            anchor="top"
             onClose={() => setIsOpen(false)}
           >
             <Box sx={getDrawerMenuStyle}>
-              <IconButton
-                size="large"
-                onClick={() => setIsOpen(isOpen ? false : true)}
-              >
-                <GiHamburgerMenu />
-              </IconButton>
               <ul>
                 {menuOptions.map((item) => (
                   <>
@@ -108,7 +104,7 @@ const Navbar = () => {
           <Box display={"flex"}>
             <StyledTextField />
             <StyledLockButton>
-              <img alt="Lock Icon" src={Lock} style={{ width: "20px" }} />
+              <AiOutlineLock />
             </StyledLockButton>
           </Box>
           <StyledOutlineButton>Abra sua conta</StyledOutlineButton>
