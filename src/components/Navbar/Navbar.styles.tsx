@@ -1,3 +1,4 @@
+import React from "react";
 import {
   SxProps,
   TextFieldProps,
@@ -8,7 +9,6 @@ import {
   Button,
   ButtonProps,
 } from "@mui/material/";
-import React from "react";
 
 export const getNavbarStyles = (): SxProps => ({
   display: "flex",
@@ -112,6 +112,9 @@ export const StyledLockButton = React.forwardRef<HTMLElement, IconButtonProps>(
         ":hover": {
           background: "#E6E6E6",
         },
+        "> *": {
+          color: "#374957",
+        },
       }}
       {...props}
     ></IconButton>
@@ -137,12 +140,60 @@ export const StyledOutlineButton = React.forwardRef<HTMLElement, ButtonProps>(
   )
 );
 
-export const getDrawerMenuStyle = (): SxProps => ({
-  width: "200px",
+export const StyledBurguerButton = ({ isOpen, ...props }) => (
+  <Box
+    sx={{
+      height: "40px",
+      width: "40px",
+      padding: "8px",
+      margin: "8px 8px 8px 8px",
+      borderRadius: "4px",
+      justifyContent: "space-between",
+      display: "flex",
+      flexDirection: "column",
+    }}
+    {...props}
+  >
+    <Box
+      {...props}
+      sx={{
+        width: "100%",
+        height: "2px",
+        background: "#f3f3f3",
+        borderRadius: "4px",
+        transform: isOpen ? "rotate(45deg)" : "",
+        translate: isOpen ? "0em 0.70em" : "",
+        transition: "ease-out 0.3s",
+      }}
+    />
+    <Box
+      sx={{
+        width: "100%",
+        height: "2px",
+        background: "#f3f3f3",
+        borderRadius: "4px",
+        transform: isOpen ? "rotate(45deg)" : "",
+        transition: "ease-out 0.3s",
+      }}
+    />
+    <Box
+      sx={{
+        width: "100%",
+        height: "2px",
+        background: "#f3f3f3",
+        borderRadius: "4px",
+        transform: isOpen ? "rotate(-45deg)" : "",
+        translate: isOpen ? "0em -0.70em" : "",
+        transition: "ease-out 0.3s",
+      }}
+    />
+  </Box>
+);
 
+export const getDrawerMenuStyle = (): SxProps => ({
   "> ul": {
     listStyle: "none",
-    marginTop: "2em",
+    marginTop: "4em",
     "> li": {
       padding: "20px 4%",
       transition: ".5s",
@@ -157,4 +208,21 @@ export const getDrawerMenuStyle = (): SxProps => ({
       },
     },
   },
+});
+
+export const getMobileContainerStyle = (): SxProps => ({
+  display: "flex",
+  width: "100%",
+  justifyContent: "right",
+  alignItems: "center",
+  background: "#5271FF",
+  position: "relative",
+  zIndex: 1400, // Todo: A navbar só fica a frente do drawer caso o Zindex seja mais que 1400
+});
+
+export const getMobileLogoStyle = (): SxProps => ({
+  height: "48px",
+  position: "absolute",
+  left: 0,
+  marginLeft: "4px",
 });
