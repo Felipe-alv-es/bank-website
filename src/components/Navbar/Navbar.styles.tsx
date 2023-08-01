@@ -158,33 +158,33 @@ export const StyledBurguerButton = ({ isOpen, ...props }) => (
       {...props}
       sx={{
         width: "100%",
-        height: "4px",
+        height: "2px",
         background: "#f3f3f3",
         borderRadius: "4px",
         transform: isOpen ? "rotate(45deg)" : "",
-        translate: isOpen ? "0em 0.60em" : "",
-        transition: "ease-out 0.5s",
+        translate: isOpen ? "0em 0.70em" : "",
+        transition: "ease-out 0.3s",
       }}
     />
     <Box
       sx={{
         width: "100%",
-        height: "4px",
+        height: "2px",
         background: "#f3f3f3",
         borderRadius: "4px",
         transform: isOpen ? "rotate(45deg)" : "",
-        transition: "ease-out 0.5s",
+        transition: "ease-out 0.3s",
       }}
     />
     <Box
       sx={{
         width: "100%",
-        height: "4px",
+        height: "2px",
         background: "#f3f3f3",
         borderRadius: "4px",
         transform: isOpen ? "rotate(-45deg)" : "",
-        translate: isOpen ? "0em -0.60em" : "",
-        transition: "ease-out 0.5s",
+        translate: isOpen ? "0em -0.70em" : "",
+        transition: "ease-out 0.3s",
       }}
     />
   </Box>
