@@ -51,7 +51,7 @@ const Services = () => {
       },
     },
     style: {
-      margin: "0 36px 0 36px",
+      margin: isMobile ? "0 24px 0 24px" : "0 36px 0 36px",
       background: "#f3f3f3",
     },
   };
