@@ -34,7 +34,9 @@ const Home = () => {
                 sx={getImageStyle}
               />
               <Box sx={getContentBoxStyle}>
-                <Typography sx={getTitleStyle}>{item.title}</Typography>
+                <Typography sx={getTitleStyle} variant="">
+                  {item.title}
+                </Typography>
                 <Box sx={{ m: 3 }} />
                 <Typography sx={getTextStyle}>{item.text}</Typography>
                 <Box sx={{ m: 3 }} />
