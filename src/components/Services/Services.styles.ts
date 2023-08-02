@@ -48,13 +48,24 @@ export const getTextStyle = () => ({
 export const getPageTitleStyle = () => ({
   typography: "h4",
   fontWeight: "bold",
-  margin: "32px 32px 32px 72px",
+  margin: "32px 32px 0px 72px",
   color: "#374957",
   whiteSpace: "pre-line",
   "@media(max-width: 544px)": {
     typography: "h5",
     fontWeight: "bold",
-    margin: "20px 16px 20px 16px",
-    textAlign: "center",
+    margin: "24px 24px 0px 24px",
+  },
+});
+
+export const getPageSubtitleStyle = () => ({
+  typography: "h5",
+  fontWeight: "medium",
+  color: "#374957",
+  margin: "0px 32px 32px 72px",
+  "@media(max-width: 544px)": {
+    typography: "h6",
+    fontWeight: "medium",
+    margin: "0px 24px 24px 24px",
   },
 });

@@ -19,6 +19,21 @@ const Creditcard = () => {
   const swipeNextPage = () => swiper.slideTo(+1);
   const swipePreviousPage = () => swiper.slideTo(-1);
 
+  const [width, setWidth] = useState(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+
+  React.useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
+
   const params = {
     spaceBetween: "36px",
     onSwiper: setSwiper,
@@ -37,7 +52,7 @@ const Creditcard = () => {
       },
     },
     style: {
-      margin: "0 36px 0 36px",
+      margin: isMobile ? "0 24px 0 24px" : "0 36px 0 36px",
       background: "#f3f3f3",
     },
   };
@@ -65,10 +80,8 @@ const Creditcard = () => {
                   </Box>
                   <Box sx={{ m: 2 }} />
                   <Typography sx={getTextStyle}>{item.text}</Typography>
-                  <Box sx={{ m: 3 }} />
-                  <Box sx={{ paddingLeft: "32px" }}>{item.list}</Box>
-                  <Box sx={{ m: 5 }} />
                 </Box>
+                <Box sx={{ m: 5 }} />
                 <StyledButton>{"Confira"}</StyledButton>
               </Box>
             </SwiperSlide>

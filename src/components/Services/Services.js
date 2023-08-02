@@ -10,6 +10,7 @@ import {
   getTextStyle,
   getContainerStyle,
   getPageTitleStyle,
+  getPageSubtitleStyle,
 } from "./Services.styles.ts";
 
 const Services = () => {
@@ -60,6 +61,9 @@ const Services = () => {
     <Box>
       <Typography sx={getPageTitleStyle}>
         {"Confira nossos serviços"}
+      </Typography>
+      <Typography sx={getPageSubtitleStyle}>
+        {"Para o seu dia a dia!"}
       </Typography>
       <Box sx={getContainerStyle}>
         <IconButton onClick={swipePreviousPage} sx={getIconButtonStyle}>

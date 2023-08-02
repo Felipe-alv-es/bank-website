@@ -5,14 +5,8 @@ const serviceSlider = [
   {
     id: 1,
     title: "Fictional Blue ",
-    text: "Todos beneficios anteriores mais: ",
+    text: "Com a Fatura Digital, você pode \n dizer adeus ao papel e receber suas \n faturas de forma prática. Adentre a \n essa facilidade.",
     img: creditCard,
-    list: (
-      <ul>
-        <li>Anuidade Gratuíta</li>
-        <li>8% de CashBack em sites parceiros da Fictional Bank</li>
-      </ul>
-    ),
   },
   {
     id: 2,
