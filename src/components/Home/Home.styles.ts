@@ -30,6 +30,9 @@ export const getContentBoxStyle = () => ({
   position: "absolute",
   marginLeft: "64px",
   top: "40%",
+  "@media(max-width: 544px)": {
+    marginLeft: "32px",
+  },
 });
 
 export const getTitleStyle = () => ({
@@ -64,5 +67,6 @@ export const getButtonStyle = () => ({
   },
   "@media(max-width: 544px)": {
     height: "48px",
+    fontSize: "16px",
   },
 });
