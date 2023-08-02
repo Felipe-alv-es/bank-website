@@ -1,6 +1,9 @@
 export const getContainerStyle = () => ({
   display: "flex",
   padding: "16px 32px 16px 32px",
+  "@media(max-width: 544px)": {
+    padding: 0,
+  },
 });
 
 export const getIconButtonStyle = () => ({
@@ -8,6 +11,9 @@ export const getIconButtonStyle = () => ({
   borderWidth: "1px",
   background: "#f3f3f3",
   borderRadius: "8px",
+  "@media(max-width: 544px)": {
+    display: "none",
+  },
 });
 
 export const getTextBoxStyle = () => ({
@@ -45,4 +51,10 @@ export const getPageTitleStyle = () => ({
   margin: "32px 32px 32px 72px",
   color: "#374957",
   whiteSpace: "pre-line",
+  "@media(max-width: 544px)": {
+    typography: "h5",
+    fontWeight: "bold",
+    margin: "20px 16px 20px 16px",
+    textAlign: "center",
+  },
 });

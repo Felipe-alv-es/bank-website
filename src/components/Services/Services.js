@@ -17,9 +17,25 @@ const Services = () => {
   const swipeNextPage = () => swiper.slideTo(+1);
   const swipePreviousPage = () => swiper.slideTo(-1);
 
+  const [width, setWidth] = useState(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+
+  React.useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
+
   const params = {
     spaceBetween: "36px",
     onSwiper: setSwiper,
+    pagination: isMobile ? true : false,
     breakpoints: {
       200: {
         slidesPerView: 1,
