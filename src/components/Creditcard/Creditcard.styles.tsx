@@ -4,19 +4,28 @@ import { Button } from "@mui/material";
 export const getContainerStyle = () => ({
   display: "flex",
   padding: "16px 32px 16px 32px",
+  "> div > div > .swiper-slide": {
+    transform: "scale(0.95)",
+    background: "#f3f3f3",
+    borderRadius: "8px",
+  },
   "@media(max-width: 544px)": {
     padding: 0,
     "> div": {
       padding: "2em",
+      "> .swiper": {
+        background: "red",
+      },
       "> div": {
         "> .swiper-slide": {
           transform: "scale(0.95)",
+          background: "#f3f3f3",
+          borderRadius: "8px",
         },
         "> .swiper-slide-active": {
           transition: "250ms",
           transform: "scale(1.05)",
           zIndex: 1,
-          background: "#f3f3f3",
         },
       },
     },

@@ -36,6 +36,8 @@ const Services = () => {
   const params = {
     spaceBetween: "36px",
     onSwiper: setSwiper,
+    centeredSlides: true,
+    loop: true,
     pagination: isMobile ? true : false,
     breakpoints: {
       200: {
@@ -53,7 +55,7 @@ const Services = () => {
     },
     style: {
       margin: isMobile ? "0 24px 0 24px" : "0 36px 0 36px",
-      background: "#f3f3f3",
+      background: "transparent",
     },
   };
 

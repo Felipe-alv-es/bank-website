@@ -54,8 +54,8 @@ const Creditcard = () => {
       },
     },
     style: {
-      margin: isMobile ? "0 24px 0 24px" : "0 36px 0 36px",
-      background: "#f3f3f3",
+      margin: isMobile ? "" : "0 36px 0 36px",
+      background: "transparent",
     },
   };
 

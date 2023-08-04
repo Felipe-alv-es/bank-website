@@ -1,6 +1,10 @@
 export const getContainerStyle = () => ({
   display: "flex",
   padding: "16px 32px 16px 32px",
+  "> div > div > .swiper-slide": {
+    background: "#f3f3f3",
+    borderRadius: "8px",
+  },
   "@media(max-width: 544px)": {
     padding: 0,
   },
