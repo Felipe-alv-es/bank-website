@@ -15,8 +15,8 @@ import {
 
 const Services = () => {
   const [swiper, setSwiper] = useState();
-  const swipeNextPage = () => swiper.slideTo(+1);
-  const swipePreviousPage = () => swiper.slideTo(-1);
+  const swipeNextPage = () => swiper.slideNext();
+  const swipePreviousPage = () => swiper.slidePrev();
 
   const [width, setWidth] = useState(window.innerWidth);
 

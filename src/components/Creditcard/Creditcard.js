@@ -16,8 +16,8 @@ import {
 
 const Creditcard = () => {
   const [swiper, setSwiper] = useState();
-  const swipeNextPage = () => swiper.slideTo(+1);
-  const swipePreviousPage = () => swiper.slideTo(-1);
+  const swipeNextPage = () => swiper.slideNext();
+  const swipePreviousPage = () => swiper.slidePrev();
 
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -37,6 +37,8 @@ const Creditcard = () => {
   const params = {
     spaceBetween: "36px",
     onSwiper: setSwiper,
+    centeredSlides: true,
+    loop: true,
     breakpoints: {
       200: {
         slidesPerView: 1,

@@ -1,5 +1,5 @@
-import { Button } from "@mui/material";
 import React from "react";
+import { Button } from "@mui/material";
 
 export const getContainerStyle = () => ({
   display: "flex",
@@ -8,6 +8,20 @@ export const getContainerStyle = () => ({
     padding: 0,
   },
 });
+
+// "> div": {
+//   background: "red",
+//   padding: "2em",
+//   "> div": {
+//     "> .swiper-slide-active": {
+//       transition: "250ms",
+//       // background: "red",
+//       transform: "scale(1.05)",
+//       zIndex: 1,
+//       background: "#f3f3f3",
+//     },
+//   },
+// },
 
 export const getIconButtonStyle = () => ({
   borderStyle: "solid",

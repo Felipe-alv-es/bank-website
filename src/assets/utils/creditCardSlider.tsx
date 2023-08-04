@@ -44,6 +44,12 @@ const serviceSlider = [
       </ul>
     ),
   },
+  {
+    id: 5,
+    title: "Fictional Blue aaaaaaa ",
+    text: "Com a Fatura Digital, você pode \n dizer adeus ao papel e receber suas \n faturas de forma prática. Adentre a \n essa facilidade.",
+    img: creditCard,
+  },
 ];
 
 export default serviceSlider;

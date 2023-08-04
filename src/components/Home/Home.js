@@ -33,6 +33,7 @@ const Home = () => {
     navigation: isMobile ? false : true,
     pagination: { clickable: true },
     autoplay: true,
+    loop: true,
   };
 
   return (

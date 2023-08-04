@@ -28,6 +28,12 @@ const serviceSlider = [
     text: "Soluções financeiras personalizadas \n para você, provendo recursos \n adicionais a seus projetos de \n maneira rapida e transparente. ",
     icon: <BiMoneyWithdraw />,
   },
+  {
+    id: 5,
+    title: "Emprestimos",
+    text: "Soluções financeiras personalizadas \n para você, provendo recursos \n adicionais a seus projetos de \n maneira rapida e transparente. ",
+    icon: <BiMoneyWithdraw />,
+  },
 ];
 
 export default serviceSlider;
