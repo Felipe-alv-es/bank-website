@@ -6,22 +6,22 @@ export const getContainerStyle = () => ({
   padding: "16px 32px 16px 32px",
   "@media(max-width: 544px)": {
     padding: 0,
+    "> div": {
+      padding: "2em",
+      "> div": {
+        "> .swiper-slide": {
+          transform: "scale(0.95)",
+        },
+        "> .swiper-slide-active": {
+          transition: "250ms",
+          transform: "scale(1.05)",
+          zIndex: 1,
+          background: "#f3f3f3",
+        },
+      },
+    },
   },
 });
-
-// "> div": {
-//   background: "red",
-//   padding: "2em",
-//   "> div": {
-//     "> .swiper-slide-active": {
-//       transition: "250ms",
-//       // background: "red",
-//       transform: "scale(1.05)",
-//       zIndex: 1,
-//       background: "#f3f3f3",
-//     },
-//   },
-// },
 
 export const getIconButtonStyle = () => ({
   borderStyle: "solid",
