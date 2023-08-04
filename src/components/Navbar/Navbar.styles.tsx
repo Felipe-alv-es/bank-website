@@ -216,7 +216,7 @@ export const getMobileContainerStyle = (): SxProps => ({
   justifyContent: "right",
   alignItems: "center",
   background: "#5271FF",
-  position: "relative",
+  position: "fixed",
   zIndex: 1400, // Todo: A navbar só fica a frente do drawer caso o Zindex seja mais que 1400
 });
 
