@@ -35,7 +35,7 @@ const Creditcard = () => {
   const isMobile = width <= 768;
 
   const params = {
-    // spaceBetween: "36px",
+    spaceBetween: isMobile ? 0 : "36px",
     onSwiper: setSwiper,
     centeredSlides: true,
     loop: true,
