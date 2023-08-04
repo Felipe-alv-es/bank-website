@@ -10,16 +10,33 @@ import {
   getTextStyle,
   getContainerStyle,
   getPageTitleStyle,
+  getPageSubtitleStyle,
 } from "./Services.styles.ts";
 
 const Services = () => {
   const [swiper, setSwiper] = useState();
-  const swipeNextPage = () => swiper.slideTo(+1);
-  const swipePreviousPage = () => swiper.slideTo(-1);
+  const swipeNextPage = () => swiper.slideNext();
+  const swipePreviousPage = () => swiper.slidePrev();
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+
+  React.useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
 
   const params = {
     spaceBetween: "36px",
     onSwiper: setSwiper,
+    pagination: isMobile ? true : false,
     breakpoints: {
       200: {
         slidesPerView: 1,
@@ -35,7 +52,7 @@ const Services = () => {
       },
     },
     style: {
-      margin: "0 36px 0 36px",
+      margin: isMobile ? "0 24px 0 24px" : "0 36px 0 36px",
       background: "#f3f3f3",
     },
   };
@@ -44,6 +61,9 @@ const Services = () => {
     <Box>
       <Typography sx={getPageTitleStyle}>
         {"Confira nossos serviços"}
+      </Typography>
+      <Typography sx={getPageSubtitleStyle}>
+        {"Para o seu dia a dia!"}
       </Typography>
       <Box sx={getContainerStyle}>
         <IconButton onClick={swipePreviousPage} sx={getIconButtonStyle}>

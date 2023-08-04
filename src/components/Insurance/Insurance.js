@@ -19,7 +19,7 @@ const Insurance = () => {
     <Box sx={getContainerStyle}>
       <Typography sx={getPageTitleStyle}>{"Está sem seguro ?"}</Typography>
       <Typography sx={getPageSubtitleStyle}>{"Não corra risco!"}</Typography>
-      <Box sx={{ m: 5 }} />
+      <Box sx={{ m: 3 }} />
       <Box sx={getContentContainerStyle}>
         <Box sx={getHouseInsuranceStyle}>
           <Box sx={getInsuranceNameStyle}>

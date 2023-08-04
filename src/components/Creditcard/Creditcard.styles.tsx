@@ -1,10 +1,27 @@
-import { Button } from "@mui/material";
 import React from "react";
+import { Button } from "@mui/material";
 
 export const getContainerStyle = () => ({
   display: "flex",
   padding: "16px 32px 16px 32px",
+  "@media(max-width: 544px)": {
+    padding: 0,
+  },
 });
+
+// "> div": {
+//   background: "red",
+//   padding: "2em",
+//   "> div": {
+//     "> .swiper-slide-active": {
+//       transition: "250ms",
+//       // background: "red",
+//       transform: "scale(1.05)",
+//       zIndex: 1,
+//       background: "#f3f3f3",
+//     },
+//   },
+// },
 
 export const getIconButtonStyle = () => ({
   borderStyle: "solid",
@@ -13,6 +30,9 @@ export const getIconButtonStyle = () => ({
   borderRadius: "8px",
   height: "280px", // Verificar o Height para ficar responsivo
   alignSelf: "center",
+  "@media(max-width: 544px)": {
+    display: "none",
+  },
 });
 
 export const getTextBoxStyle = () => ({
@@ -44,6 +64,11 @@ export const getPageTitleStyle = () => ({
   margin: "32px 32px 32px 72px",
   color: "#374957",
   whiteSpace: "pre-line",
+  "@media(max-width: 544px)": {
+    margin: "46px 24px 24px 24px",
+    typography: "h5",
+    fontWeight: "bold",
+  },
 });
 
 export const getImageBoxStyle = () => ({

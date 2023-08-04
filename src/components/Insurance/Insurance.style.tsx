@@ -4,18 +4,29 @@ import insuranceBackground from "../../assets/images/PeoplesInverted.jpg";
 
 export const getContainerStyle = () => ({
   margin: "76px",
+  "@media(max-width: 544px)": {
+    margin: "46px 24px 24px 24px",
+  },
 });
 
 export const getPageTitleStyle = () => ({
   typography: "h4",
   fontWeight: "bold",
   color: "#374957",
+  "@media(max-width: 544px)": {
+    typography: "h5",
+    fontWeight: "bold",
+  },
 });
 
 export const getPageSubtitleStyle = () => ({
   typography: "h5",
   fontWeight: "medium",
   color: "#374957",
+  "@media(max-width: 544px)": {
+    typography: "h6",
+    fontWeight: "medium",
+  },
 });
 
 export const getContentContainerStyle = () => ({
