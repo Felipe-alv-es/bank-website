@@ -39,7 +39,7 @@ const Home = () => {
   return (
     <Box sx={getContainerStyle}>
       <Navbar />
-      <Swiper {...params}>
+      <Swiper {...params} style={{ paddingTop: isMobile ? "56px" : "" }}>
         {homeSlider.map((item) => (
           <SwiperSlide key={item.id}>
             <Box>
