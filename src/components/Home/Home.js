@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import { Box, Typography, Button } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
-import homeSlider from "../../assets/utils/homeSlider.json";
+import { homeSlider } from "../../assets/utils/homeSlider.tsx";
 import {
   getImageStyle,
   getContentBoxStyle,
