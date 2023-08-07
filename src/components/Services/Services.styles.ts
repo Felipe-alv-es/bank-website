@@ -47,6 +47,7 @@ export const getTitleStyle = () => ({
 export const getTextStyle = () => ({
   variant: "body1",
   whiteSpace: "pre-line",
+  color: "#374957",
 });
 
 export const getPageTitleStyle = () => ({
