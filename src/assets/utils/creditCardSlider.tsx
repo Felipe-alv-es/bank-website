@@ -32,7 +32,7 @@ const serviceSlider = [
   {
     id: 5,
     title: "Cartão Rico",
-    text: "Anuidade Grátis e %% de investback na plataforma Rico ou XpInvestimentos",
+    text: "Anuidade Grátis e 5% de investback na plataforma Rico ou XpInvestimentos",
     img: rico,
   },
 ];

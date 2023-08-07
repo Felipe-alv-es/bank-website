@@ -9,25 +9,25 @@ const serviceSlider = [
   {
     id: 1,
     title: "Meus Cartões",
-    text: "Gerencie suas opções \n de pagamento desfrutando de \n uma experiência \n personalizada para você ",
+    text: "Gerencie suas opções de pagamento desfrutando de uma experiência personalizada para você ",
     icon: <BsBank />,
   },
   {
     id: 2,
     title: "Fatura Digital",
-    text: "Com a Fatura Digital, você pode \n dizer adeus ao papel e receber suas \n faturas de forma prática. Adentre a \n essa facilidade",
+    text: "Com a Fatura Digital, você pode dizer adeus ao papel e receber suas faturas de forma prática. Adentre a essa facilidade",
     icon: <HiOutlineDocumentReport />,
   },
   {
     id: 3,
     title: "Atendimento",
-    text: "Estamos sempre prontos para \n fornecer suporte especializado e \n responder às suas dúvidas. Conte \n conosco",
+    text: "Estamos sempre prontos para fornecer suporte especializado e responder às suas dúvidas. Conte conosco",
     icon: <BsShieldExclamation />,
   },
   {
     id: 4,
     title: "Emprestimos",
-    text: "Soluções financeiras personalizadas \n para você, provendo recursos \n adicionais a seus projetos de \n maneira rapida e transparente ",
+    text: "Soluções financeiras personalizadas para você, provendo recursos adicionais a seus projetos de maneira rapida e transparente ",
     icon: <BiMoneyWithdraw />,
   },
   {
