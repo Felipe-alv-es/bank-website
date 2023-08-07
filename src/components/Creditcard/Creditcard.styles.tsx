@@ -55,6 +55,7 @@ export const getTextBoxStyle = () => ({
 export const getTitleStyle = () => ({
   display: "flex",
   lineHeight: "24px",
+  color: "#374957",
   "> p": {
     typography: "h5",
     fontWeight: "bold",
@@ -63,6 +64,7 @@ export const getTitleStyle = () => ({
 });
 
 export const getTextStyle = () => ({
+  color: "#374957",
   variant: "body1",
   whiteSpace: "pre-line",
 });
@@ -84,7 +86,7 @@ export const getImageBoxStyle = () => ({
   width: "100%",
   display: "flex",
   justifyContent: "center",
-  height: "200px",
+  height: "50%",
 });
 
 export const StyledButton = (props) => {

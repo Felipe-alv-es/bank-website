@@ -1,54 +1,39 @@
-import React from "react";
-import creditCard from "../images/CreditCard1.png";
+import magalu from "../images/creditCardImages/Magalu.png";
+import rico from "../images/creditCardImages/Rico.png";
+import blue from "../images/creditCardImages/blue.png";
+import black from "../images/creditCardImages/black.png";
+import RGB from "../images/creditCardImages/RGB.png";
 
 const serviceSlider = [
   {
     id: 1,
-    title: "Fictional Blue ",
-    text: "Com a Fatura Digital, você pode \n dizer adeus ao papel e receber suas \n faturas de forma prática. Adentre a \n essa facilidade.",
-    img: creditCard,
+    title: "Fictional Blue",
+    text: "Anuidade Grátis e 5% OFF em lojas parceiras da FictionalBank",
+    img: blue,
   },
   {
     id: 2,
-    title: "Fatura Digital",
-    text: "Com a Fatura Digital, você pode \n dizer adeus ao papel e receber suas \n faturas de forma prática. Adentre a \n essa facilidade.",
-    img: creditCard,
-    list: (
-      <ul>
-        <li>Anuidade Gratuíta</li>
-        <li>8% de CashBack em sites parceiros da Fictional Bank</li>
-      </ul>
-    ),
+    title: "Fictional Black",
+    text: "Acesso a Crédito ilimitado com bonus em pontos",
+    img: black,
   },
   {
     id: 3,
-    title: "Atendimento",
-    text: "Estamos sempre prontos para \n fornecer suporte especializado e \n responder às suas dúvidas. Conte \n conosco",
-    img: creditCard,
-    list: (
-      <ul>
-        <li>Anuidade Gratuíta</li>
-        <li>8% de CashBack em sites parceiros da Fictional Bank</li>
-      </ul>
-    ),
+    title: "Fictional RGB",
+    text: "Descontos de 30% em compras de eletronicos e periféricos",
+    img: RGB,
   },
   {
     id: 4,
-    title: "Emprestimos",
-    text: "Soluções financeiras personalizadas \n para você, provendo recursos \n adicionais a seus projetos de \n maneira rapida e transparente. ",
-    img: creditCard,
-    list: (
-      <ul>
-        <li>Anuidade Gratuíta</li>
-        <li>8% de CashBack em sites parceiros da Fictional Bank</li>
-      </ul>
-    ),
+    title: "Cartão Magalu",
+    text: "Anuidade Grátis e 2% de cashback no site da Magalu",
+    img: magalu,
   },
   {
     id: 5,
-    title: "Fictional Blue aaaaaaa ",
-    text: "Com a Fatura Digital, você pode \n dizer adeus ao papel e receber suas \n faturas de forma prática. Adentre a \n essa facilidade.",
-    img: creditCard,
+    title: "Cartão Rico",
+    text: "Anuidade Grátis e %% de investback na plataforma Rico ou XpInvestimentos",
+    img: rico,
   },
 ];
 
