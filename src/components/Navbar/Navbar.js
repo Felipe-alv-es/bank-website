@@ -23,12 +23,16 @@ import {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
+  const isMobile = width <= 768;
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
   }
 
   React.useEffect(() => {
+    if (isMobile) {
+      return;
+    }
     document
       .querySelector("#input-id")
       .addEventListener("keypress", function (e) {
@@ -38,7 +42,7 @@ const Navbar = () => {
           e.preventDefault();
         }
       });
-  }, []);
+  }, [isMobile]);
 
   React.useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
@@ -46,8 +50,6 @@ const Navbar = () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
   }, []);
-
-  const isMobile = width <= 768;
 
   const menuOptions = [
     { text: "Inicio", icon: <AiFillHome /> },
