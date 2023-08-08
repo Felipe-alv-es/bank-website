@@ -29,6 +29,18 @@ const Navbar = () => {
   }
 
   React.useEffect(() => {
+    document
+      .querySelector("#input-id")
+      .addEventListener("keypress", function (e) {
+        const keyCode = e.keyCode ? e.keyCode : e.wich;
+
+        if (keyCode < 47 || keyCode > 58) {
+          e.preventDefault();
+        }
+      });
+  }, []);
+
+  React.useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
