@@ -8,31 +8,31 @@ const serviceSlider = [
   {
     id: 1,
     title: "Fictional Blue",
-    text: "Anuidade Grátis e 5% OFF em lojas parceiras da FictionalBank",
+    text: "Anuidade Grátis e 5% OFF em lojas parceiras da FictionalBank.",
     img: blue,
   },
   {
     id: 2,
     title: "Fictional Black",
-    text: "Acesso a Crédito ilimitado com bonus em pontos",
+    text: "Acesso a Crédito ilimitado com bonus em pontos.",
     img: black,
   },
   {
     id: 3,
     title: "Fictional RGB",
-    text: "Descontos de 30% em compras de eletronicos e periféricos",
+    text: "Descontos de 30% em compras de eletronicos e periféricos.",
     img: RGB,
   },
   {
     id: 4,
     title: "Cartão Magalu",
-    text: "Anuidade Grátis e 2% de cashback no site da Magalu",
+    text: "Anuidade Grátis e 2% de cashback no site da Magalu.",
     img: magalu,
   },
   {
     id: 5,
     title: "Cartão Rico",
-    text: "Anuidade Grátis e 5% de investback na plataforma Rico ou XpInvestimentos",
+    text: "Anuidade Grátis e 5% de investback na plataforma Rico ou XpInvestimentos.",
     img: rico,
   },
 ];

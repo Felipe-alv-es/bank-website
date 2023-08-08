@@ -32,7 +32,9 @@ const Home = () => {
     slidesPerView: 1,
     navigation: isMobile ? false : true,
     pagination: { clickable: true },
-    autoplay: true,
+    autoplay: {
+      delay: 15000,
+    },
     loop: true,
   };
 
