@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography, Button, Snackbar, Alert } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { homeSlider } from "../../assets/utils/homeSlider.tsx";
 import {
@@ -40,6 +40,15 @@ const Home = () => {
 
   return (
     <Box sx={getContainerStyle}>
+      <Snackbar
+        open
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        sx={{ marginTop: "64px", position: "absolute" }}
+      >
+        <Alert variant="filled" severity="warning">
+          Site em construção
+        </Alert>
+      </Snackbar>
       <Navbar />
       <Swiper {...params} style={{ paddingTop: isMobile ? "56px" : "" }}>
         {homeSlider.map((item) => (

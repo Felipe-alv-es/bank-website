@@ -35,6 +35,7 @@ export const getContainerStyle = () => ({
 export const getIconButtonStyle = () => ({
   borderStyle: "solid",
   borderWidth: "1px",
+  borderColor: "#8C8C8C",
   background: "#f3f3f3",
   borderRadius: "8px",
   height: "280px", // Verificar o Height para ficar responsivo
@@ -50,6 +51,8 @@ export const getTextBoxStyle = () => ({
   borderStyle: "solid",
   borderRadius: "8px",
   height: "100%",
+  cursor: "pointer",
+  borderColor: "#8C8C8C",
 });
 
 export const getTitleStyle = () => ({

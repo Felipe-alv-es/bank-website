@@ -15,6 +15,7 @@ export const getIconButtonStyle = () => ({
   borderWidth: "1px",
   background: "#f3f3f3",
   borderRadius: "8px",
+  borderColor: "#8C8C8C",
   "@media(max-width: 544px)": {
     display: "none",
   },
@@ -25,7 +26,12 @@ export const getTextBoxStyle = () => ({
   borderWidth: "1px",
   borderStyle: "solid",
   borderRadius: "8px",
+  borderColor: "#8C8C8C",
   height: "100%",
+  cursor: "pointer",
+  ":hover": {
+    borderColor: "#5271FF",
+  },
 });
 
 export const getTitleStyle = () => ({

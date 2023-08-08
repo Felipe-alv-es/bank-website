@@ -42,6 +42,7 @@ export const getHouseInsuranceStyle = () => ({
   borderWidth: "1px",
   padding: "24px",
   borderRadius: "8px",
+  borderColor: "#8C8C8C",
   width: "65%",
   backgroundPosition: "right",
   backgroundSize: "contain",
@@ -89,6 +90,7 @@ export const getOurInsurancesContainerStyles = () => ({
   padding: "24px",
   borderWidth: "1px",
   borderRadius: "8px",
+  borderColor: "#8C8C8C",
   width: "30%",
   background: "#f3f3f3",
   "@media(max-width: 1150px)": {
