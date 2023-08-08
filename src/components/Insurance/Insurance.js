@@ -17,7 +17,7 @@ import {
 const Insurance = () => {
   return (
     <Box sx={getContainerStyle}>
-      <Typography sx={getPageTitleStyle}>{"Está sem seguro ?"}</Typography>
+      <Typography sx={getPageTitleStyle}>{"Está sem seguro?"}</Typography>
       <Typography sx={getPageSubtitleStyle}>{"Não corra risco!"}</Typography>
       <Box sx={{ m: 3 }} />
       <Box sx={getContentContainerStyle}>
@@ -30,12 +30,12 @@ const Insurance = () => {
           </Box>
           <Box sx={{ m: 2 }} />
           <Typography sx={getSubtitleNameStyle}>
-            {"Seguros para sua Casa."}
+            {"Seguros para sua Casa"}
           </Typography>
           <Box sx={{ m: 1 }} />
           <Typography sx={getBodyTextStyle}>
             {
-              "Segurança e tranquilidade para o seu lar, \n com o seguro de casa que você pode confiar."
+              "Segurança e tranquilidade para o seu lar, \n com o seguro de casa que você pode confiar"
             }
           </Typography>
           <Box sx={{ m: 2 }} />

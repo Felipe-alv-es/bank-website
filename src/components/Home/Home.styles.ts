@@ -22,7 +22,7 @@ export const getImageStyle = () => ({
   "@media(max-width: 544px)": {
     width: "auto",
     height: "500px",
-    objectPosition: "top 0px right 8em",
+    objectPosition: "top 0px right 14em",
   },
 });
 

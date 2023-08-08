@@ -35,6 +35,7 @@ export const getContainerStyle = () => ({
 export const getIconButtonStyle = () => ({
   borderStyle: "solid",
   borderWidth: "1px",
+  borderColor: "#8C8C8C",
   background: "#f3f3f3",
   borderRadius: "8px",
   height: "280px", // Verificar o Height para ficar responsivo
@@ -50,11 +51,14 @@ export const getTextBoxStyle = () => ({
   borderStyle: "solid",
   borderRadius: "8px",
   height: "100%",
+  cursor: "pointer",
+  borderColor: "#8C8C8C",
 });
 
 export const getTitleStyle = () => ({
   display: "flex",
   lineHeight: "24px",
+  color: "#374957",
   "> p": {
     typography: "h5",
     fontWeight: "bold",
@@ -63,6 +67,7 @@ export const getTitleStyle = () => ({
 });
 
 export const getTextStyle = () => ({
+  color: "#374957",
   variant: "body1",
   whiteSpace: "pre-line",
 });
@@ -84,7 +89,7 @@ export const getImageBoxStyle = () => ({
   width: "100%",
   display: "flex",
   justifyContent: "center",
-  height: "200px",
+  height: "50%",
 });
 
 export const StyledButton = (props) => {

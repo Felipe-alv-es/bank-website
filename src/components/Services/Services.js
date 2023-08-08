@@ -36,21 +36,28 @@ const Services = () => {
   const params = {
     spaceBetween: "36px",
     onSwiper: setSwiper,
-    centeredSlides: true,
-    loop: true,
     pagination: isMobile ? true : false,
     breakpoints: {
       200: {
         slidesPerView: 1,
+        centeredSlides: true,
+        loop: true,
       },
       850: {
         slidesPerView: 2,
+        centeredSlides: true,
+        loop: true,
       },
       1200: {
         slidesPerView: 3,
+        centeredSlides: true,
+        loop: true,
       },
       1500: {
-        slidesPerView: 4,
+        slidesPerView: 4, // loop não funciona com +4 slides, quebra o stilo
+      },
+      1750: {
+        slidesPerView: 5,
       },
     },
     style: {

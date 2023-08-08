@@ -50,7 +50,7 @@ export const getImageStyle = (): SxProps => ({
 });
 
 export const StyledTextField = React.forwardRef<HTMLElement, TextFieldProps>(
-  () => (
+  (props) => (
     <Box
       sx={{
         display: "flex",
@@ -59,6 +59,7 @@ export const StyledTextField = React.forwardRef<HTMLElement, TextFieldProps>(
         padding: "8px",
         alignItems: "center",
       }}
+      id="input-id"
     >
       <input
         placeholder="agência"
